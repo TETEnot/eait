@@ -1,0 +1,85 @@
+# Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.npm
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-error.log
+
+# Cache
+.cache/
+.eait-cache/
+cache/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# UXP
+*.ccx
+.uxp-developer-tool/
+
+# Test fixtures (大きいので別管理)
+tests/fixtures/videos/*.mp4
+tests/fixtures/videos/*.mov
+tests/fixtures/videos/*.mkv
+
+# Generated
+THIRD_PARTY_LICENSES.md.tmp
+*.bak
+
+# ----------------------------------------------------------------
+# Internal-only artifacts (excluded from public OSS publishing)
+# Move out of this section as each item is reviewed and made
+# publication-ready. None of these are required to build/run
+# the publishable code under panel/spike or future panel/main.
+# ----------------------------------------------------------------
+
+# Design documents — pending cleanup before public release
+docs/
+decisions/
+schemas/
+skills/
+
+# Project-local context for Claude Code, internal changelog,
+# and the current internal-facing README (a public README will
+# replace this before publishing).
+CLAUDE.md
+CHANGELOG.md
+README.md

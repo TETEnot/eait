@@ -1,0 +1,26 @@
+{
+  "name": "eait-spike-panel",
+  "version": "0.0.1",
+  "private": true,
+  "description": "EAIT Phase 0a — UXP API reconnaissance spike panel for Premiere Pro 25.6+",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "package": "npm run build && node scripts/zip-ccx.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vite-uxp-plugin": "^0.2.0"
+  }
+}

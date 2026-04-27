@@ -1,0 +1,123 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, "Segoe UI", "Yu Gothic UI", system-ui, sans-serif;
+  font-size: 13px;
+  background: #1d1d1d;
+  color: #e6e6e6;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 12px;
+  gap: 12px;
+}
+
+.app h1 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.app .subtitle {
+  font-size: 11px;
+  color: #999;
+  margin-top: -8px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolbar button {
+  padding: 6px 10px;
+  background: #2a2a2a;
+  color: #e6e6e6;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.toolbar button:hover:not(:disabled) { background: #333; }
+.toolbar button.run-all { background: #2a4a7a; border-color: #3a5a8a; }
+.toolbar button.clear { background: #3a2a2a; border-color: #5a3a3a; }
+.toolbar button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.card {
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card .title {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: #444;
+  color: #ccc;
+}
+.badge.possible { background: #1f5e2c; color: #c8f5d0; }
+.badge.caveat { background: #6e5a1c; color: #ffe6a0; }
+.badge.not_possible, .badge.error { background: #6e2222; color: #ffd0d0; }
+.badge.idle { background: #333; color: #999; }
+.badge.running { background: #234a6e; color: #cfe8ff; }
+
+.card button {
+  align-self: flex-start;
+  padding: 4px 10px;
+  background: #2a2a2a;
+  color: #e6e6e6;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+}
+.card button:hover:not(:disabled) { background: #333; }
+.card button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.log {
+  flex: 1;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px 10px;
+  overflow: auto;
+  font-family: "Cascadia Code", Consolas, "Yu Gothic UI", monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.log .head { color: #88c0ff; }
+.log .ok { color: #b8e0a0; }
+.log .warn { color: #ffd070; }
+.log .fail { color: #ff8080; }
+.log .info { color: #aaa; }
+.log .meta { color: #777; }
+.log hr { border: none; border-top: 1px dashed #333; margin: 6px 0; }

@@ -1,0 +1,33 @@
+{
+  "id": "com.eait.spike",
+  "name": "EAIT API Spike",
+  "version": "0.0.1",
+  "main": "index.html",
+  "manifestVersion": 5,
+  "host": [
+    {
+      "app": "premierepro",
+      "minVersion": "25.6.0"
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "eait.spike.panel",
+      "label": {
+        "default": "EAIT API Spike"
+      },
+      "minimumSize": { "width": 360, "height": 480 },
+      "maximumSize": { "width": 1920, "height": 1200 },
+      "preferredDockedSize": { "width": 480, "height": 720 },
+      "preferredFloatingSize": { "width": 600, "height": 800 }
+    }
+  ],
+  "requiredPermissions": {
+    "localFileSystem": "fullAccess",
+    "network": {
+      "domains": ["all"]
+    },
+    "clipboard": "readAndWrite"
+  }
+}
